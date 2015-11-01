@@ -2,6 +2,15 @@ p {
   display:inline;
   font-size: 40px;
 }
+.help-instruction p{
+    font-size: x-large;
+	float:left;
+}
+.help-page-class div{
+	float:left;
+	margin-bottom:15px;
+}
+
 
 input{
   width:130px;
@@ -11,7 +20,7 @@ input{
 .nav{
 	font-size: x-large;
 }
-.masterPage{
+.master-page{
 background-color: black;
 height: 100vh;
 

@@ -5,18 +5,18 @@ Pages.gamepage=new homePage(container,'game-page');
 Pages.helppage=new Page(container,'help-page');
 window.location.hash='game-page';
 
-Pages.gamepage.Show();
+Pages.gamepage.show();
 
 window.addEventListener('hashchange',function(ev){
-	var temp=ev.target.location.hash;
-	temp=temp.substring(1);
+	var next_page_id=ev.target.location.hash;
+	next_page_id=next_page_id.substring(1);
 	for (prop in Pages) {
    		 if (!Pages.hasOwnProperty(prop)) {
        
      		   continue;
  	     }
-         if (Pages[prop].Idchecking(temp)){
-         	Pages[prop].Show();
+         if (Pages[prop].match(next_page_id)){
+         	Pages[prop].show();
          }
 }
 });

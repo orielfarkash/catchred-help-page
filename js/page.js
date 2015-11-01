@@ -9,7 +9,7 @@ function Page (container,pageId) {
 
 self.after_show=function(){};
 }
-Page.prototype.Show=function(){
+Page.prototype.show=function(){
 	var self=this;
 	self.container.innerHTML='';
 	self.container.appendChild(self.el);
@@ -18,7 +18,7 @@ Page.prototype.Show=function(){
 };
 
 // check if the id belongs to this page
-Page.prototype.Idchecking=function(id){
+Page.prototype.match=function(id){
 	var self=this;
 	return (self.id===id);
 };
