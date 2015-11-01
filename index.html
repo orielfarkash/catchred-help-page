@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS Bin</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+		
+
+		<div class="masterPage col-lg-2">
+			<ul class="nav nav-pills nav-stacked">
+ 			 <li role="presentation" style="margin-top: 5px;" ><a href="#game-page">The Game</a></li>
+ 			 <li role="presentation"><a href="#help-page">Instruction</a></li>
+			</ul>
+		</div>
+		
+		
+		<div class="page-container col-lg-10"></div>
+		</div>
+
+		
+		
+		
+		
+		
+		
+	  <script type="text/template" id="game-page">
+		
+	  <p class="score">Score:
+            <input type="text" readonly="yes" value="0" />
+          </p>
+		<div class="game unselectable">
+  			 <div class=" square winner"></div>
+  			 <div class="square"></div>
+ 			 <div class="square"></div>
+ 			 <div class="square"></div>
+		</div>
+		
+		</script>
+		
+		<script type="text/template" id="help-page">
+		
+		<h1>GAME INSTRUCTION</h1>
+			<P style="font-size: x-large"> at this game you need to click on the red square before he runs away
+				every time you caught him you will get 5 points!
+				<br>you need to do it fast,because every second he is free you will get -2 points.
+				<br>also be aware from the bad ugly blue square's,every click on them will give you extra -5 points.
+                <img></img>      
+				<br><br><br>GOOD LUCK!
+				</P>
+		</script>
+		
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+		<script src="Page.js"></script>
+		<script src="thegame.js"></script>
+		<script src="main.js"></script>
+		
+	</body>
+</html>
