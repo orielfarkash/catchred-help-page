@@ -6,7 +6,7 @@ every time you made it you will get 5 points,
 if you hurt seinfeld or delay too much time you will lose points.
 ##code Challenges
 i just started to learn js with [Ynon Perek videos](https://www.tocode.co.il/), so its only the beginning.                    
-the switch between pages in single web app is something that takes me a lot of time,
+the switch between pages in singlepage web application is something that takes me a lot of time,
 and also the js OOP way is something that i sit on him now to fully understand and its not easy but its fun so who cares ;)  
 ##files content
 1.  index.html  (contains the HTML and also text/template scripts )
