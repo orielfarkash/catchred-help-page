@@ -40,6 +40,9 @@ height: 100vh;
   display:inline-block;
   background:blue;
   margin: 10px;
+  background-image:url("https://pbs.twimg.com/profile_images/433319671430123521/LAm8cB1b.jpeg");
+  background-size:cover;
+  
 }
 
 .game {
@@ -50,4 +53,6 @@ height: 100vh;
 
 .game .winner {
   background:red;
+  background-image:url("http://www.siyumhaseinfeld.com/images/chars/newman.jpg");
+  background-size:cover;
 }
