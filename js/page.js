@@ -1,14 +1,21 @@
-function Page (container,pageId) {
+
+// class constructor
+function Page (game,container,pageId) {
 	var self=this;
 	self.id=pageId;
+	self.game=game;
 	var html_content=document.querySelector('#'+pageId).innerHTML;
 	self.container=container;
 	self.el=document.createElement('div');
 	self.el.innerHTML=html_content; 
 
-
-self.after_show=function(){};
+// after show method for page objects
+self.after_show=function(){
+	var self=this;
+	self.game.stopTimer();
+};
 }
+// show method that append the page html to the div container
 Page.prototype.show=function(){
 	var self=this;
 	self.container.innerHTML='';
@@ -17,25 +24,23 @@ Page.prototype.show=function(){
 	self.after_show();
 };
 
-// check if the id belongs to this page
+// return true if the id argument is the same as the current page id
 Page.prototype.match=function(id){
 	var self=this;
 	return (self.id===id);
 };
-
-function homePage(container,pageId){
+// 'home page' class that inherits from page class 
+function homePage(game,container,pageId){
 	var self=this;
-	Page.call(self, container, pageId);
+	Page.call(self,game, container, pageId);
 	
 
-
+// after show method for 'home page' objects
   self.after_show=function(){
-  	//// cached DOM elements
-	var el = {
- 	sqr: document.querySelectorAll('.square'),
-  	score: document.querySelector('.score input')
-	};
-	setupEvents(el);
+	
+	self.game.setupEvents();
+	
+	
 };
 }
 homePage.prototype = Object.create(Page.prototype);

@@ -1,8 +1,10 @@
 var container=document.querySelector('.page-container');
 var Pages={};
+var Games={};
+Games.game1=new game();
 
-Pages.gamepage=new homePage(container,'game-page');
-Pages.helppage=new Page(container,'help-page');
+Pages.gamepage=new homePage(Games.game1,container,'game-page');
+Pages.helppage=new Page(Games.game1,container,'help-page');
 window.location.hash='game-page';
 
 Pages.gamepage.show();
